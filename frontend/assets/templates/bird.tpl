@@ -1,2 +1,5 @@
 <h2>{{ html .ServerName }}: {{ html .Target }}</h2>
-{{ .Result }}
+
+<div id="bird-result">
+    {{ .Result }}
+</div>

@@ -196,7 +196,7 @@ func webHandlerBGPMap(endpoint string, command string) func(w http.ResponseWrite
 func webServerStart(l net.Listener) {
 	// redirect main page to all server summary
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/summary/"+url.PathEscape(strings.Join(setting.servers, "+")), 302)
+		http.Redirect(w, r, "/lg/summary/"+url.PathEscape(strings.Join(setting.servers, "+")), 302)
 	})
 
 	// serve static pages using embedded assets from template.go
